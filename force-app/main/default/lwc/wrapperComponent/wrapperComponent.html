@@ -1,0 +1,33 @@
+<template>
+  <lightning-card title="Wrapper class component"></lightning-card>
+  <template if:true={data}>
+    <table
+      class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_col_bordered"
+    >
+      <thead>
+        <tr class="slds-text-title_caps">
+          <th scope="col">
+            <div title="Key">Account Name</div>
+          </th>
+          <th scope="col">
+            <div title="Value">Account Related Contacts</div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <template for:each={data} for:item="KeyValue">
+          <tr key={KeyValue.Id}>
+            <th scope="col">
+              <div>{KeyValue.objAcc.Name}</div>
+            </th>
+            <th scope="col">
+              <template for:each={KeyValue.lstCons} for:item="con">
+                <div key={con.Id}>{con.name}</div>
+              </template>
+            </th>
+          </tr>
+        </template>
+      </tbody>
+    </table>
+  </template>
+</template>
