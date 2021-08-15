@@ -1,3 +1,0 @@
-<aura:component implements="force:appHostable" >
-	<p>Hello World</p>
-</aura:component>
