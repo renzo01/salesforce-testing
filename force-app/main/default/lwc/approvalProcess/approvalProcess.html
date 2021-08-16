@@ -4,6 +4,11 @@
     title="Aproval Process"
     icon-name="standard:approval"
   >
-    <lightning-datatable columns={columns} data={values}> </lightning-datatable>
+    <lightning-datatable
+      key-field="id"
+      columns={columns}
+      data={values}
+      hide-checkbox-column
+    ></lightning-datatable>
   </lightning-card>
 </template>

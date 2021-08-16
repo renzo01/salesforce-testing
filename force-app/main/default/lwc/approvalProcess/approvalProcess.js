@@ -5,19 +5,19 @@ export default class ApprovalProcess extends LightningElement {
     return [
       {
         label: "Record Type",
-        value: "recordType"
+        fieldName: "recordType"
       },
       {
         label: "Target type",
-        value: "targetType"
+        fieldName: "targetType"
       },
       {
         label: "Owner",
-        value: "owner"
+        fieldName: "owner"
       },
       {
         label: "Date",
-        value: "date"
+        fieldName: "date"
       }
     ];
   }
@@ -26,7 +26,7 @@ export default class ApprovalProcess extends LightningElement {
       recordType: "001",
       targetType: "Accounts",
       owner: "Renzo",
-      data: new Date().toLocaleDateString()
+      date: new Date().toLocaleDateString()
     }
   ];
 }
